@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body id="home">
+    <header class="header">
+  <a href="#home" class="logo">Salehin.</a>
+  <nav class="navbar">
+    <a  href="#home" class="active">Home</a>
+    <a  href="#about">About</a>
+    <a  href="#services">Services</a>
+    <a  href="#portfolio">Portfolio</a>
+    <a  href="#contact">Contact</a>
+  </nav>
+</header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I’m Ahmed Munirus Salehin</h1>
+<h3>MERN Stack Developer</h3>
+<p>
+  I craft modern, responsive, and high‑performance web applications with the MERN stack. 
+  Combining clean design with robust functionality, I turn ideas into seamless digital experiences. 
+  My focus is delivering solutions that not only meet requirements but inspire confidence and exceed expectations.
+</p>
+
+            <div class="btn-box">
+                <a href="https://www.fiverr.com/ams_saikat" target="_blank" >Hire Me</a>
+                <a href="https://wa.me/8801992111739" target="_blank">Let’s Talk</a>
+            </div>
+
+            <div class="message-box">
+                <a href="#contact">or Leave a Message?</a>
+            </div>
+        </div>
+
+        <div class="dashLine">
+            <img class="img" src="Salehin.jpg" alt="">
+        </div>
+
+        
+    </section>
+
+
+<section class="about" id="about">
+  <div class="about-content">
+    <h2 class="heading">About <span>Me</span></h2>
+    <p>
+      I’m Ahmed Munirus Salehin, a passionate MERN Stack Developer who loves building
+      scalable, responsive web applications. I enjoy solving complex problems,
+      designing clean architectures, and creating visually appealing user interfaces.
+    </p>
+
+    <!-- Hidden extra text -->
+    <p id="more-text" style="display: none;">
+      A passionate freelancer specialized in full-stack web development using the MERN stack. 
+      I create modern, responsive, and high-performance web applications using MongoDB, Express, React, and Node. 
+      My goal is to deliver projects that meet your requirements and exceed expectations. 
+      I’m committed to providing quality work on time and ensuring your ideas come to life efficiently. 
+      Message me before ordering so we can discuss your project and make sure you get exactly what you need.
+    </p>
+
+    <div class="btn-box">
+      <a href="#" id="read-more-btn" style="height: 35px; width: 170px;">Read More</a>
+      <a href="Salehin_Resume.pdf" target="_blank" style="height: 35px; width: 170px;">Show CV</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <section class="services" id="services">
+  <div class="services-heading">
+    <h2>My Services</h2>
+  </div>
+
+  <div class="services-container">
+    <div class="service-box">
+      <i class="bi bi-code-slash"></i>
+      <h3>Frontend Development</h3>
+      <p>
+        Building responsive, interactive UIs with React, Redux, and modern CSS techniques.
+      </p>
+    </div>
+
+    <div class="service-box">
+      <i class="bi bi-server"></i>
+      <h3>Backend Development</h3>
+      <p>
+        Designing scalable RESTful APIs, managing databases, and ensuring smooth data flow.
+      </p>
+    </div>
+
+    <div class="service-box">
+      <i class="bi bi-layers"></i>
+      <h3>MERN Stack Solutions</h3>
+      <p>
+        Full‑stack applications using MongoDB, Express, React, and Node.js with clean architecture.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-heading">
+    <h2>My Projects</h2>
+  </div>
+
+  <div class="portfolio-slider">
+    <!-- Project 1 -->
+    <div class="project-box active">
+      <h3>Book Store App</h3>
+      <p>
+        A full-stack application to manage books, categories, and users. Built with React, Node.js, and MongoDB.
+      </p>
+      <a href="https://github.com/AmsSaikat/Book_Store" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-box">
+      <h3>MERN Authentication</h3>
+      <p>
+        Secure authentication system with JWT, MongoDB, Express, and React. Includes login, register, and protected routes.
+      </p>
+      <a href="https://github.com/AmsSaikat/MERN-AUTH-APP" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-box">
+      <h3>Learning Management System (LMS)</h3>
+      <p>
+        A course and lecture management platform with CRUD operations, Redux state sync, and backend APIs.
+      </p>
+      <a href="https://github.com/AmsSaikat/academiX-LMS" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+
+    <!-- Arrow buttons container -->
+    <div class="arrow-controls">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="contact" id="contact">
+  <div class="contact-heading">
+    <h2>Contact Me</h2>
+  </div>
+
+  <div class="contact-container">
+    <form id="contact-form" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="title" placeholder="Subject / Title" required>
+  <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+  <button type="submit" class="contact-btn">Send Message</button>
+  
+  <!-- Loader -->
+  <div id="loader" class="loader" style="display:none;"></div>
+</form>
+
+    <div class="contact-info">
+      <p>Email: <a href="mailto:amssaikat@gmail.com">amssaikat@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/AmsSaikat" target="_blank">github.com/AmsSaikat</a></p>
+      <p>Location: Rajshahi, Bangladesh</p>
+    </div>
+  </div>
+</section>
+
+
+
+    <footer>
+  <div class="footer-sci">
+    <a href="https://www.facebook.com/saikat.ams.56" target="_blank"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/ahmed-munirus-salehin-a36872348/" target="_blank"><i class="bi bi-linkedin"></i></a>
+    <a href="https://wa.me/8801992111739" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  </div>
+  <p class="footer-text">© 2026 Salehin. All Rights Reserved.</p>
+</footer>
+
+
+
+
+<script>
+  // Get all sections and nav links
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100; // offset for header height
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+
+
+
+<script>
+  const readMoreBtn = document.getElementById("read-more-btn");
+  const moreText = document.getElementById("more-text");
+
+  readMoreBtn.addEventListener("click", function(e) {
+    e.preventDefault(); // prevent jumping to top
+    if (moreText.style.display === "none") {
+      moreText.style.display = "block";
+      readMoreBtn.textContent = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      readMoreBtn.textContent = "Read More";
+    }
+  });
+</script>
+
+
+
+<script>
+  const form = document.getElementById('contact-form');
+const loader = document.getElementById('loader');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // prevent default for demo, remove if using backend
+  loader.style.display = 'block'; // show loader
+
+  // Simulate async send (replace with actual EmailJS or backend call)
+  setTimeout(() => {
+    loader.style.display = 'none'; // hide loader after done
+    alert('Message sent successfully!');
+    form.reset();
+  }, 2000);
+});
+</script>
+
+
+    <script>
+  const projects = document.querySelectorAll('.project-box');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let current = 0;
+
+  function showProject(index) {
+    projects.forEach((proj, i) => {
+      proj.classList.remove('active');
+    });
+    projects[index].classList.add('active');
+  }
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + projects.length) % projects.length;
+    showProject(current);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % projects.length;
+    showProject(current);
+  });
+
+  // initialize
+  showProject(current);
+</script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init({
+      publicKey: "0SHtUYu85E37npwUI", // replace with your actual Public Key
+    });
+  })();
+
+  window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.sendForm('service_vn06nmd', 'template_084p76r', this)
+        .then(() => {
+          alert('Message sent successfully!');
+          this.reset();
+        }, (error) => {
+          console.error('FAILED...', error);
+          alert('Error sending message. Check console for details.');
+        });
+    });
+  }
+</script>
+
+
+
+</body>
+</html>
