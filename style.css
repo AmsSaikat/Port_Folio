@@ -415,6 +415,41 @@ section {
 
 
 
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 12px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  font-weight: 500;
+}
+
+/* Show state */
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Variants */
+.toast.success {
+  background-color: #2831a7; /* green */
+  color: #fff;
+}
+.toast.error {
+  background-color: #dc3545; /* red */
+  color: #fff;
+}
+.toast.info {
+  background-color: #00abf0; /* blue accent */
+  color: #fff;
+}
+
 
 
 

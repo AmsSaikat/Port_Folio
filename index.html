@@ -210,13 +210,20 @@
 
     navLinks.forEach(link => {
       link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
     });
+
+    // ✅ Special case: if at very top, force Home active
+    if (window.scrollY < 100) {
+      document.querySelector('.navbar a[href="#home"]').classList.add("active");
+    } else {
+      navLinks.forEach(link => {
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    }
   });
 </script>
-
 
 
 
@@ -244,13 +251,12 @@
 const loader = document.getElementById('loader');
 
 form.addEventListener('submit', function(e) {
-  e.preventDefault(); // prevent default for demo, remove if using backend
-  loader.style.display = 'block'; // show loader
+  e.preventDefault(); 
+  loader.style.display = 'block'; 
 
-  // Simulate async send (replace with actual EmailJS or backend call)
   setTimeout(() => {
-    loader.style.display = 'none'; // hide loader after done
-    alert('Message sent successfully!');
+    loader.style.display = 'none';
+    showToast('Message sent successfully!', 'success');
     form.reset();
   }, 2000);
 });
@@ -286,7 +292,20 @@ form.addEventListener('submit', function(e) {
 
 
 
+<script>
+  function showToast(message, type = "info") {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
 
+  toast.className = "toast " + type;
+
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+</script>
 
 
 
@@ -294,7 +313,7 @@ form.addEventListener('submit', function(e) {
 <script type="text/javascript">
   (function() {
     emailjs.init({
-      publicKey: "0SHtUYu85E37npwUI", // replace with your actual Public Key
+      publicKey: "0SHtUYu85E37npwUI",
     });
   })();
 
@@ -303,17 +322,17 @@ form.addEventListener('submit', function(e) {
       event.preventDefault();
       emailjs.sendForm('service_vn06nmd', 'template_084p76r', this)
         .then(() => {
-          alert('Message sent successfully!');
+          showToast('Message sent successfully!', 'success');
           this.reset();
         }, (error) => {
           console.error('FAILED...', error);
-          alert('Error sending message. Check console for details.');
+          showToast('Error sending message. Please try again.', 'error');
         });
     });
   }
 </script>
 
-
+<div id="toast" class="toast"></div>
 
 </body>
 </html>
