@@ -17,6 +17,13 @@
     <a  href="#portfolio">Portfolio</a>
     <a  href="#contact">Contact</a>
   </nav>
+
+  <div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
 </header>
 
     <section class="home">
@@ -201,7 +208,7 @@
     let current = "";
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100; // offset for header height
+      const sectionTop = section.offsetTop - 100; 
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
         current = section.getAttribute("id");
@@ -212,7 +219,6 @@
       link.classList.remove("active");
     });
 
-    // ✅ Special case: if at very top, force Home active
     if (window.scrollY < 100) {
       document.querySelector('.navbar a[href="#home"]').classList.add("active");
     } else {
@@ -233,7 +239,7 @@
   const moreText = document.getElementById("more-text");
 
   readMoreBtn.addEventListener("click", function(e) {
-    e.preventDefault(); // prevent jumping to top
+    e.preventDefault(); 
     if (moreText.style.display === "none") {
       moreText.style.display = "block";
       readMoreBtn.textContent = "Read Less";
@@ -286,7 +292,6 @@ form.addEventListener('submit', function(e) {
     showProject(current);
   });
 
-  // initialize
   showProject(current);
 </script>
 
@@ -331,6 +336,28 @@ form.addEventListener('submit', function(e) {
     });
   }
 </script>
+
+
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navbar.classList.toggle('active');
+});
+
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navbar.classList.remove('active');
+  });
+});
+</script>
+
+
+
 
 <div id="toast" class="toast"></div>
 
